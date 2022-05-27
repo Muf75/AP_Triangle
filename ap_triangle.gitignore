@@ -1,18 +1,21 @@
-import math
+Class Util:
 
-def triangle(self, a, b, c):
-  self.a=a
-  self.b=b
-  self.c=c
-  
-  def area(self):
-    s=(self.a+self.b+self.c)/2
-    area=math.sqrt(s(s-self.a)(s-self.b)*(s-self.c))
-    return area
+def findPerimeter(self, a, b, c):
+       return (a + b + c)
 
-  def perimeter(self):
-    perimeter = a + b + c
-    return perimeter
-    
-t1 = triangle(1, 2, 3)
-t1.area()
+def findArea(self, a, b, c):
+       p = (a + b + c)
+       s = p/2
+       return (s * (s-a) * (s-b)*(s-c))**0.5
+
+a = float(input("Please input the first side of the triangle : "))
+
+b = float(input("Please input the second side of the triangle : "))
+
+c = float(input("Please input the third side of the triangle : "))
+
+u = Util()
+
+print("The perimeter of the triangle is : {0:.2f}".format( u.findPerimeter(a, b, c))) 
+
+print("The area of the triangle is : {0:.2f}".format(u.findArea(a, b, c)))
